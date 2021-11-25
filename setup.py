@@ -17,7 +17,7 @@ setup(
   author_email = 'debabhi1396@gmail.com',
   url = 'https://github.com/abhilash1910/LongPegasus',   
   download_url = 'https://github.com/abhilash1910/LongPegasus/archive/v_01.tar.gz',    
-  keywords = ['Longformer','Self Attention','Global Attention','Gap sentence generation','Pegasus','Transformer'.'Encoder Decoder','Tensorflow'],   
+  keywords = ['Longformer','Self Attention','Global Attention','Gap sentence generation','Pegasus','Transformer','Encoder Decoder','Tensorflow'],   
   install_requires=[           
 
           'tensorflow',
