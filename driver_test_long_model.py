@@ -11,7 +11,8 @@ from transformers import PegasusTokenizer, TFPegasusForConditionalGeneration
 
 if __name__=='__main__':
     l=LongPegasus()             
-    model,tokenizer=l.create_long_model(save_model="E:\\Pegasus\\", attention_window=512, max_pos=4096)
+    model_name=None            
+    model,tokenizer=l.create_long_model(save_model="E:\\Pegasus\\", attention_window=512, max_pos=4096,model_name=model_name)
     model = TFPegasusForConditionalGeneration.from_pretrained('E:/Pegasus/')
     tokenizer = PegasusTokenizer.from_pretrained('E:/Pegasus/')
 

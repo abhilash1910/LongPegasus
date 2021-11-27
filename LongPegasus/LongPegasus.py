@@ -56,8 +56,11 @@ class LongformerSelfAttentionPegasus(tf.keras.layers.Layer):
                
                
 class LongPegasus():
-    def create_long_model(self,save_model,attention_window,max_pos):
-        self.base_model='google/pegasus-xsum'
+    def create_long_model(self,save_model,attention_window,max_pos,model_name):
+        if model_name==None:
+            self.base_model='google/pegasus-xsum'
+        else:
+            self.base_model=model_name
         self.model=TFPegasusForConditionalGeneration.from_pretrained(self.base_model)
         self.tokenizer=PegasusTokenizer.from_pretrained(self.base_model,model_max_length=max_pos)
         self.configuration=LongformerPegasusConfig.from_pretrained(self.base_model)

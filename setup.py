@@ -21,7 +21,9 @@ setup(
   install_requires=[           
 
           'tensorflow',
-          'transformers'
+          'transformers',
+          'sentencepiece'
+          
       ],
   classifiers=[
     'Development Status :: 3 - Alpha',      
