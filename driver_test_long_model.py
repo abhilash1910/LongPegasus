@@ -12,7 +12,7 @@ from transformers import PegasusTokenizer, TFPegasusForConditionalGeneration
 if __name__=='__main__':
     l=LongPegasus()             
     model_name=None            
-    model,tokenizer=l.create_long_model(save_model="E:\\Pegasus\\", attention_window=512, max_pos=4096,model_name=model_name)
+    model,tokenizer=l.create_long_model(save_model="E:\\Pegasus\\", attention_window=4096, max_pos=4096,model_name=model_name)
     model = TFPegasusForConditionalGeneration.from_pretrained('E:/Pegasus/')
     tokenizer = PegasusTokenizer.from_pretrained('E:/Pegasus/')
 
@@ -21,7 +21,7 @@ if __name__=='__main__':
     "amid dry conditions. The aim is to reduce the risk of wildfires. Nearly 800 thousand customers were "
     "scheduled to be affected by the shutoffs which were expected to last through at least midday tomorrow."
     )
-    inputs = tokenizer([ARTICLE_TO_SUMMARIZE], max_length=1024, return_tensors='tf')
+    inputs = tokenizer([ARTICLE_TO_SUMMARIZE], max_length=4096, return_tensors='tf')
     
     # Generate Summary
     summary_ids = model.generate(inputs['input_ids'])
