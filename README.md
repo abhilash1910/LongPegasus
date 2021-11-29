@@ -93,8 +93,7 @@ The models & tokenizers which get stored in the local drives/storages through th
 
 - [Huggingface Demonstration](https://huggingface.co/transformers/training.html)
 - [Youtube Huggingface Keras](https://youtu.be/rnTGBy2ax1c)
-- Trainer module
-https://user-images.githubusercontent.com/30946547/143826043-5f74b798-1889-46db-b8b1-c4f82dce0957.mp4
+- [Trainer module](https://user-images.githubusercontent.com/30946547/143826043-5f74b798-1889-46db-b8b1-c4f82dce0957.mp4)
 
 
 
