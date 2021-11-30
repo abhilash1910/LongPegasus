@@ -16,9 +16,10 @@
 
 
 The package can be installed from [Pypi](https://pypi.org/project/LongPegasus/) using the following code:
+The latest stable release is 0.3 which resolves an issue related to Keras base layer [Issue#2](https://github.com/abhilash1910/LongPegasus/issues/2)
 
 ```python
-!pip install LongPegasus==0.2
+!pip install LongPegasus==0.3
 ```
 
 
@@ -71,7 +72,7 @@ The following is the output from the google xsum model for the input article:
 - For inference, it is important to specify 'return_tensors' as tf since the module uses [Tensorflow](https://www.tensorflow.org/) backend.
 
 
-### Using the latest version 0.2
+### Using the latest versions 0.3 (& 0.2)
 
 
 - The only difference is in the arguements of the create_long_model. There is an additional parameter called as 'model_name' which can be None or any model from the pretrained model list for [Pegasus](https://huggingface.co/models?sort=downloads&search=pegasus) .If the model_name parameter is chosen as None , the the default 'google/pegasus-xsum' model is loaded as in version 0.1.The syntax for the create_long_model method is as follows:
@@ -85,6 +86,8 @@ Rest of the code segment mentioned in the previous version is the same. It is im
 - For google colab,(possibly other notebook libraries), there is a requirement to install sentencepiece for transformers to function properly. This is done by default in the latest version (0.2) and no need to manually install it again.
 
 - For inference, it is important to specify 'return_tensors' as tf since the module uses [Tensorflow](https://www.tensorflow.org/) backend.
+
+- Due to an issue in the keras base layer arguements, sometimes in Colab an issue arises for trainable arguement. This is resolved in the 0.3 stable version.A [Colab notebook](https://github.com/abhilash1910/LongPegasus/blob/master/LongPegasus.ipynb) is present in the repository.
 
 
 ### Finetuning with the LongPegasus models
@@ -101,12 +104,14 @@ The models & tokenizers which get stored in the local drives/storages through th
 ## Samples
 
 
-More example notebooks would be shared from Kaggle/Colab. In the meantime, the package can be tried in Kaggle as well.
+More example notebooks would be shared from Kaggle/Colab. In the meantime, the package can be tried in Kaggle as well.A simple walkthrough has been provided in the colab link.
+
+- [Colab](https://github.com/abhilash1910/LongPegasus/blob/master/LongPegasus.ipynb)
 
 
 ## Contributing
 
-Pull requests are (not yet)welcome. For major changes, please open an issue first to discuss what you would like to change.
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 ## License
 
