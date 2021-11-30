@@ -40,7 +40,7 @@ class LongformerPegasusConfig(PegasusConfig):
             
 class LongformerSelfAttentionPegasus(tf.keras.layers.Layer):
     def __init__(self,config,layer_id,**kwargs):
-        super().__init__(config,layer_id,**kwargs)
+        super().__init__(**kwargs)
         self.self_attention=TFLongformerSelfAttention(config,layer_id,name="self")
         self.outputs=TFLongformerSelfOutput(config,name="outputs")
     def call(self,inputs,training=False):
